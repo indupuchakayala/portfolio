@@ -39,17 +39,6 @@ Runs on http://localhost:4200 and calls the backend automatically in dev mode.
 
 ## 3. Deploy (all free tiers)
 
-1. Push `backend/` and `frontend/` to two GitHub repos (or one repo, two folders)
-2. **Backend → Render**: New Web Service → connect repo → build command `npm install`, start command `npm start` → add the same env vars from `.env` in Render's dashboard
-3. **Frontend → Vercel**: New Project → connect repo → framework preset "Angular" → before deploying, update `frontend/src/environments/environment.ts` with your live Render URL
-4. Confirm the contact form works end-to-end in production (submit a real test message)
-
-## 4. Post it on LinkedIn
-
-1. Screen-record a 15-30 second scroll through your live site (QuickTime, Loom, or your OS screen recorder)
-2. Post from your personal profile with a structure like:
-   - Line 1 (hook): "Just shipped my new portfolio 🚀"
-   - 2-3 lines: what you built and the stack (Angular + Node.js), one thing you're proud of
-   - The live link
-   - 3-5 hashtags: #Angular #NodeJS #WebDevelopment #FullStackDeveloper #OpenToWork
-3. Post Tue-Thu morning, and reply to early comments quickly — it helps the algorithm surface it further
+1. Push the whole repo to GitHub (backend/ and frontend/ folders together)
+2. **Backend → Render**: New Web Service → connect repo → Root Directory `backend` → build command `npm install`, start command `npm start` → add the same env vars from `.env` in Render's dashboard
+3. **Frontend → Vercel**: New Project → connect repo → Root Directory `frontend` → framework preset "Angular" → before deploying, update `frontend/src/environments/environment.prod.ts` with your live Render URL
