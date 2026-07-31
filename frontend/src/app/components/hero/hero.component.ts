@@ -18,7 +18,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
           </div>
           <p class="role">Software Engineer 3 | Full Stack Developer</p>
           <p class="tagline">
-            I'm a Software Engineer with 8 years of experience building secure,
+            I'm a Software Engineer 3 with 8 years of experience building secure,
             scalable backend systems and clean frontend interfaces for enterprise
             SaaS products — from REST APIs to role-based access control.
           </p>
@@ -36,7 +36,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
           </div>
           <pre class="code"><code><span class="kw">const</span> developer = {{'{'}}
             name: <span class="str">'Indu Priya Puchakayala'</span>,
-            role: <span class="str">'Software Engineer'</span>,
+            role: <span class="str">'Software Engineer 3'</span>,
             stack: [ <span class="str">'Vuejs'</span>, <span class="str">'Angular'</span>, <span class="str">'Node.js'</span>, <span class="str">'PHP'</span>, <span class="str">'Laravel'</span>,<span class="str">'MySQL'</span>],
             currentlyBuilding: <span class="str">'{{ typedText }}'</span><span class="blink">|</span>
 {{'}'}};</code></pre>
