@@ -75,7 +75,7 @@ export class ProjectsComponent implements OnInit {
     { id: 4, title: "Push Connector Widgets (Line Item Integrations)", description: "Built the frontend UI for configurable push connector widgets that send line-item data to third-party platforms, and collaborated with the backend team on the integration flow and payload structure.", problem: "Line-item data needed to sync accurately with external third-party systems, but there was no reusable, configurable way to manage these integrations from the UI.", tech: ["Vue.js", "REST APIs", "Component-driven Architecture"], github: "", demo: "", image: "", featured: false },
     { id: 5, title: "Comment & Reply System", description: "Built the frontend for a comment/reply feature enabling threaded discussions on records within the platform.", problem: "Teams needed a way to discuss and leave context on entities directly within the platform, instead of relying on external chat or email.", tech: ["Vue.js", "REST APIs"], github: "", demo: "", image: "", featured: false },
   ];
-  loading = true;
+  loading = false;
   error = false;
 
   constructor(private portfolio: PortfolioService) {}
