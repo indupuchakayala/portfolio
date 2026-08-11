@@ -36,14 +36,23 @@ import { SkillGroup } from '../../models/skill.model';
   `]
 })
 export class SkillsComponent implements OnInit {
-  skills: SkillGroup[] = [];
+  skills: SkillGroup[] = [
+    { category: "Frontend", items: ["Angular", "Vue.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Component-driven Architecture", "Jest"] },
+    { category: "Backend & Platform", items: ["Node.js", "PHP", "Laravel", "REST API Design", "RBAC / Access Control"] },
+    { category: "Databases", items: ["MySQL", "MongoDB"] },
+    { category: "Cloud", items: ["Google Cloud Platform (GCP) - Image Uploads"] },
+    { category: "Reliability & Delivery", items: ["Production Issue Triage", "Root-Cause Analysis", "Issue Resolution", "CI/CD"] },
+    { category: "Tools", items: ["Git", "Docker", "Linux", "PHPStorm", "VS Code"] },
+    { category: "AI-Assisted Development", items: ["Claude", "ChatGPT", "OpenAI Codex"] },
+    { category: "Methodologies", items: ["Agile", "Scrum", "Distributed Cross-Functional Collaboration"] },
+  ];
 
   constructor(private portfolio: PortfolioService) {}
 
   ngOnInit(): void {
     this.portfolio.getSkills().subscribe({
-      next: (data) => (this.skills = data),
-      error: (err) => console.error('Failed to load skills', err)
+      next: (data) => { if (data && data.length) this.skills = data; },
+      error: (err: any) => console.error('Failed to refresh skills from API', err)
     });
   }
 }
